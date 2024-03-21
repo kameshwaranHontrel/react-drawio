@@ -8,6 +8,8 @@ export const getEmbedUrl = (
   const url = new URL('/', baseUrl ?? 'https://embed.diagrams.net');
   const urlSearchParams = new URLSearchParams();
 
+  urlSearchParams.append('embed',1);
+
   urlSearchParams.append('proto', 'json');
 
   if (addConfiguration) {
